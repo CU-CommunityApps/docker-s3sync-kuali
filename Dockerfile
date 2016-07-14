@@ -1,6 +1,8 @@
 # Pull base image.
 FROM dtr.cucloud.net/cs/s3sync
 
+USER root
+
 RUN \
   apt-get update && \
   apt-get install -y tomcat7 multitail && \
