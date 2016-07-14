@@ -6,7 +6,7 @@ USER root
 RUN \
   apt-get update && \
   apt-get install -y tomcat7 multitail && \
-  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/lib/apt/lists/* 
 
 # set the running user to deamon, dont run as root
 USER tomcat7
