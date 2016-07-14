@@ -3,7 +3,7 @@ FROM dtr.cucloud.net/cs/s3sync
 
 USER root
 
-RUN useradd -u 105 tomcat7
+RUN useradd -u 105 -g 7070 tomcat7
 
 # set the running user to deamon, dont run as root
 USER tomcat7
