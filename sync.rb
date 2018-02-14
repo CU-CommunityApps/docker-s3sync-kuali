@@ -8,7 +8,6 @@ end
 DIRECTION = ENV['DIRECTION'] || 'UP'
 SLEEP_SECONDS = ENV['SLEEP_SECONDS'].to_i || 30
 
-end
 
 def get_ts
   Time.now.utc.to_s
