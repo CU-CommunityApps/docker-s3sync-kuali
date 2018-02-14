@@ -8,9 +8,6 @@ end
 DIRECTION = ENV['DIRECTION'] || 'UP'
 SLEEP_SECONDS = ENV['SLEEP_SECONDS'].to_i || 30
 
-$exclude_list = ""
-EXCLUDE_DIRS.split(",").each do |exclude|
-  $exclude_list += " --exclude \"*#{exclude}/*\""
 end
 
 def get_ts
@@ -18,7 +15,7 @@ def get_ts
 end
 
 def up_sync
-  puts `aws s3 sync #{$exclude_list} /sync s3://#{ENV['S3_BUCKET']}`
+  puts `aws s3 sync /sync s3://#{ENV['S3_BUCKET']}`
 end
 
 
