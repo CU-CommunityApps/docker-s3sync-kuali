@@ -39,9 +39,5 @@ loop do
   end
 
   
-  if (ONCE)
-    break
-  end
-  
   sleep SLEEP_SECONDS
 end
