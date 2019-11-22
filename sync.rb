@@ -35,7 +35,7 @@ loop do
   end
 
   if DIRECTION.eql?("DN")
-    sync {up_sync}
+    sync {df_sync}
   end
 
   
