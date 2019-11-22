@@ -2,7 +2,7 @@
 FROM 078742956215.dkr.ecr.us-east-1.amazonaws.com/kuali/base
 
 USER root
-
+RUN mkdir /sync
 # Install python and pip
 RUN \
   apt-get update && \
