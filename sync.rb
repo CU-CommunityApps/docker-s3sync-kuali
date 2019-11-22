@@ -17,6 +17,9 @@ def up_sync
   puts `aws s3 sync /sync s3://#{ENV['S3_BUCKET']}`
 end
 
+def dn_sync
+  puts `aws s3 sync s3://#{ENV['S3_BUCKET']} /sync`
+end
 
 def sync
   start = Time.now
@@ -28,6 +31,10 @@ end
 loop do
 
   if DIRECTION.eql?("UP")
+    sync {up_sync}
+  end
+
+  if DIRECTION.eql?("DN")
     sync {up_sync}
   end
 
